@@ -2,4 +2,5 @@ WINDOW_SIZE = 1000
 WINDOW_HEIGHT = 800
 FPS = 60
 GRAVITY_STRENGTH = 5
-BODIES = {"brown_dwarf", "red_dwarf", "sun", "blue_giant", "red_giant", "white_dwarf", "neutron_star", "pulsar", "black_hole", "quasar"}
+MAX_BODIES = 100
+BODIES = ["brown_dwarf", "red_dwarf", "sun", "blue_giant", "red_giant", "white_dwarf", "neutron_star", "pulsar", "black_hole", "quasar"]
