@@ -4,15 +4,7 @@ This File contains information to the different categories in the bodies.py file
 
 ## Sizes
 
-Sizes are the radius of the particles / circles. The size is stored as a range.
-
-- 1 = Tiny
-- 2 = Small
-- 3 = Medium
-- 4 = Large
-- 5 = Giant
-
-Numbers between (2, 4, 6, 8) are just extra values to have slightly more variation.
+Sizes are the radius of the particles / circles. The size is stored in a variable which contains a range of float numbers.
 
 ## Colors
 
