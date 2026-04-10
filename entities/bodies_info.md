@@ -4,7 +4,7 @@ This File contains information to the different categories in the bodies.py file
 
 ## Sizes
 
-Sizes are the radius of the particles / circles.
+Sizes are the radius of the particles / circles. The size is stored as a range.
 
 - 1 = Tiny
 - 3 = Small
@@ -18,6 +18,10 @@ Numbers between (2, 4, 6, 8) are just extra values to have slightly more variati
 
 Colors are stored in a RGB range.
 
-## Mass / Density
+## Density
 
-Each body type has a set multiplier based on their real density. This multiplier is applied to their size.
+Each body type has a set multiplier based on their real density. This multiplier is applied to their size to determine their mass.
+
+## Rarity
+
+Rarity is a weighted stat. The higher the weight, the more likely the body will be picked.
