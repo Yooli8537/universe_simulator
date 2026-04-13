@@ -5,6 +5,7 @@ large = (3, 5)
 giant = (4, 6)
 
 brown_dwarf = {
+    "name": "brown_dwarf",
     "size": tiny,
     "color": ((112, 48, 6), (148, 71, 9)),
     "density": 0.5,
@@ -12,6 +13,7 @@ brown_dwarf = {
 }
 
 red_dwarf = {
+    "name": "red_dwarf",
     "size": small,
     "color": ((128, 5, 5), (176, 67, 0)),
     "density": 1,
@@ -20,6 +22,7 @@ red_dwarf = {
 
 # Sun-like stars
 sun = {
+    "name": "sun",
     "size": medium,
     "color": ((240, 197, 5), (247, 245, 96)),
     "density": 2,
@@ -27,6 +30,7 @@ sun = {
 }
 
 blue_giant = {
+    "name": "blue_giant",
     "size": large,
     "color": ((125, 212, 255), (184, 230, 255)),
     "density": 2,
@@ -35,6 +39,7 @@ blue_giant = {
 }
 
 red_giant = {
+    "name": "red_giant",
     "size": giant,
     "color": ((255, 98, 0), (255, 0, 0)),
     "density": 1,
@@ -42,6 +47,7 @@ red_giant = {
 }
 
 white_dwarf = {
+    "name": "white_dwarf",
     "size": small,
     "color": ((222, 255, 255), (143, 236, 255)),
     "density": 4,
@@ -49,13 +55,15 @@ white_dwarf = {
 }
 
 neutron_star = {
+    "name": "neutron_star",
     "size": tiny,
-    "color": ((255, 255, 255), (199, 255, 255)),
+    "color": ((199, 255, 255), (255, 255, 255)),
     "density": 8,
     "rarity": 0.1,
 }
 
 pulsar = {
+    "name": "pulsar",
     "size": tiny,
     "color": ((255, 255, 255), (199, 255, 255)),
     "density": 8,
@@ -64,6 +72,7 @@ pulsar = {
 }
 
 black_hole = {
+    "name": "black_hole",
     "size": medium,
     "color": ((0, 0, 0), (24, 24, 24)),
     "density": 15,
@@ -71,6 +80,7 @@ black_hole = {
 }
 
 quasar = {
+    "name": "quasar",
     "size": large,
     "color": ((209, 244, 255), (128, 236, 255)),
     "density": 15,

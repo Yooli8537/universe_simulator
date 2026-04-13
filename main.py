@@ -8,10 +8,13 @@ from entities import particles
 pygame.init()
 
 window = pygame.display.set_mode((settings.WINDOW_SIZE, settings.WINDOW_HEIGHT))
+
 particle_list = []
-while len(particle_list) < settings.MAX_BODIES:
+while len(particle_list) <= settings.MAX_BODIES:
         x = random.randint(0, settings.WINDOW_SIZE)
         y = random.randint(0, settings.WINDOW_HEIGHT)
+#        for name in len(settings.ACTIVE_BODIES):
+#            body = bodies.name
         particle_list.append(particles.Particle(bodies.brown_dwarf, x, y))
 
 while True:
