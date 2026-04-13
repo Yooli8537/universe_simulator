@@ -24,12 +24,16 @@ while len(particle_list) <= settings.MAX_BODIES:
         particle_list.append(particles.Particle(chosen_body, x, y))
 
 while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+        for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                        pygame.quit()
+                        sys.exit()
 
-    for particle in particle_list:
-        particle.draw(window)
+        # Clears the screen
+        window.fill((0, 0, 0))
 
-    pygame.display.flip()
+        for particle in particle_list:
+                particle.update()
+                particle.draw(window)
+
+        pygame.display.flip()

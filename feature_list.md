@@ -10,14 +10,16 @@
 -- 2 Modes: Universe & Solar System
 
 - Universe
--- Random Bodies to populate the universe
 -- Large Universe that you can zoom into & scroll / drag around the universe (not limited by window size)
 -- Physics / Events:
+--- Physics calculations for every object
+--- Gravity which pulls bodies together
+--- Spin to counteract gravity
+--- Black holes swallow other bodies and increase in size
+
+- Cosmetic Features:
 -- Pulsars & Quasars have beams
--- Physics calculations for every object
--- Gravity which pulls bodies together
--- Spin to counteract gravity
--- Black holes swallow other bodies and increase in size
+-- Glowy texture added to bodies to make them look nicer
 
 - Solar System (3D?)
 -- Stars
@@ -27,3 +29,6 @@
 -- Impact Events
 
 ## Added
+
+- Universe
+-- Random Bodies to populate the universe
