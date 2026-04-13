@@ -9,13 +9,19 @@ pygame.init()
 
 window = pygame.display.set_mode((settings.WINDOW_SIZE, settings.WINDOW_HEIGHT))
 
+options = []
+weights = []
+for body in bodies.ALL_BODIES:
+        if body["name"] in settings.ACTIVE_BODIES:
+                options.append(body)
+                weights.append(body["rarity"])
+
 particle_list = []
 while len(particle_list) <= settings.MAX_BODIES:
         x = random.randint(0, settings.WINDOW_SIZE)
         y = random.randint(0, settings.WINDOW_HEIGHT)
-#        for name in len(settings.ACTIVE_BODIES):
-#            body = bodies.name
-        particle_list.append(particles.Particle(bodies.brown_dwarf, x, y))
+        chosen_body = random.choices(options, weights)[0]
+        particle_list.append(particles.Particle(chosen_body, x, y))
 
 while True:
     for event in pygame.event.get():
@@ -24,6 +30,6 @@ while True:
             sys.exit()
 
     for particle in particle_list:
-         particle.draw(window)
+        particle.draw(window)
 
     pygame.display.flip()
