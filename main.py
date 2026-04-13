@@ -32,8 +32,11 @@ while True:
         # Clears the screen
         window.fill((0, 0, 0))
 
+        for i in range(len(particle_list)):
+                for j in range(i + 1, len(particle_list)):
+                        particle_list[i].apply_gravity(particle_list[j])
+
         for particle in particle_list:
-                particle.update()
                 particle.draw(window)
 
         pygame.display.flip()
