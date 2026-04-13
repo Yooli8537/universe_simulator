@@ -12,7 +12,7 @@
 - Universe
 -- Random Bodies to populate the universe
 -- Large Universe that you can zoom into & scroll / drag around the universe (not limited by window size)
--- Physics / Events:ö
+-- Physics / Events:
 -- Pulsars & Quasars have beams
 -- Physics calculations for every object
 -- Gravity which pulls bodies together
