@@ -91,7 +91,7 @@ quasar = {
 galaxy_center = {
     "name": "galaxy_center",
     "size": giant,
-    "color": ((0, 255, 0), (24, 24, 24)),
+    "color": ((0, 0, 0), (24, 24, 24)),
     "density": 100,
     "rarity": 0
 }
