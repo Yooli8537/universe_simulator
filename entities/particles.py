@@ -22,13 +22,17 @@ class Particle:
     def draw(self, window):
         pygame.draw.circle(window, self.color, (int(self.x), int(self.y)), int(self.radius))
 
-    def apply_gravity(self, other):
+    def update(self, dt):
+        self.x += self.velocity_x * dt
+        self.y += self.velocity_y * dt
+
+    def apply_gravity(self, other, dt):
         distance = math.hypot(other.x - self.x, other.y - self.y)
-        force = settings.GRAVITY_CONSTANT * (self.mass * other.mass) / distance ** 2
+        force = settings.GRAVITY_CONSTANT * (self.mass * other.mass) / (distance ** 2 + settings.SOFTENING ** 2)
         angle = math.atan2(other.y - self.y, other.x - self.x)
 
         force_x = math.cos(angle) * force
         force_y = math.sin(angle) * force
 
-        self.x += force_x
-        self.y += force_y
+        self.velocity_x += (force_x / self.mass) * dt
+        self.velocity_y += (force_y / self.mass) * dt

@@ -23,7 +23,10 @@ while len(particle_list) <= settings.MAX_BODIES:
         chosen_body = random.choices(options, weights)[0]
         particle_list.append(particles.Particle(chosen_body, x, y))
 
+clock = pygame.time.Clock()
+
 while True:
+        dt = clock.tick(settings.FPS) / 1000
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         pygame.quit()
@@ -34,9 +37,10 @@ while True:
 
         for i in range(len(particle_list)):
                 for j in range(i + 1, len(particle_list)):
-                        particle_list[i].apply_gravity(particle_list[j])
+                        particle_list[i].apply_gravity(particle_list[j], dt)
 
         for particle in particle_list:
+                particle.update(dt)
                 particle.draw(window)
 
         pygame.display.flip()

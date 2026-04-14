@@ -16,10 +16,12 @@
 --- Gravity which pulls bodies together
 --- Spin to counteract gravity
 --- Black holes swallow other bodies and increase in size
+--- Merging of celestial bodies
 
 - Cosmetic Features:
 -- Pulsars & Quasars have beams
 -- Glowy texture added to bodies to make them look nicer
+-- Supernovae
 
 - Solar System (3D?)
 -- Stars
