@@ -87,4 +87,13 @@ quasar = {
     "rarity": 0.02,
 }
 
+# Cannot spawn naturally
+galaxy_center = {
+    "name": "galaxy_center",
+    "size": giant,
+    "color": ((0, 255, 0), (24, 24, 24)),
+    "density": 100,
+    "rarity": 0
+}
+
 ALL_BODIES = [brown_dwarf,red_dwarf,sun,blue_giant,red_giant,white_dwarf,neutron_star,pulsar,black_hole,quasar]

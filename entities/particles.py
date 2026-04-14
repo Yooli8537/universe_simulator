@@ -4,7 +4,7 @@ import math
 import settings
 
 class Particle:
-    def __init__(self, body_type, x, y):
+    def __init__(self, body_type, x, y, velocity_x, velocity_y):
         # Appearance
         self.radius = random.uniform(body_type["size"][0], body_type["size"][1])
         r = random.randint(body_type["color"][0][0], body_type["color"][1][0])
@@ -15,16 +15,18 @@ class Particle:
         self.x = x
         self.y = y
         # Physics
-        self.velocity_x = random.uniform(-0.1, 0.1)
-        self.velocity_y = random.uniform(-0.1, 0.1)
+        self.velocity_x = velocity_x
+        self.velocity_y = velocity_y
         self.mass = self.radius * body_type["density"]
+        self.pinned = False
 
     def draw(self, window):
         pygame.draw.circle(window, self.color, (int(self.x), int(self.y)), int(self.radius))
 
     def update(self, dt):
-        self.x += self.velocity_x * dt
-        self.y += self.velocity_y * dt
+        if not self.pinned:
+            self.x += self.velocity_x * dt
+            self.y += self.velocity_y * dt
 
     def apply_gravity(self, other, dt):
         distance = math.hypot(other.x - self.x, other.y - self.y)
@@ -36,3 +38,5 @@ class Particle:
 
         self.velocity_x += (force_x / self.mass) * dt
         self.velocity_y += (force_y / self.mass) * dt
+        other.velocity_x -= (force_x / other.mass) * dt
+        other.velocity_y -= (force_y / other.mass) * dt
